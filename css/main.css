@@ -1,0 +1,1942 @@
+body {
+  color: #626262;
+  font-family: 'Sanchez', 'Times New Roman', serif;
+}
+
+.popup {
+  visibility: hidden;
+  position: sticky;
+  background-color:rgb(255, 255, 255);
+  color: rgb(135, 105, 243);
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1;
+}
+.box-header {
+    background-color: rgb(201 204 255);
+    color: black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hidden{
+  display: none;
+}
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* Add this code to your main.css file or create a new CSS file and link it in the HTML head section */
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+#main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: gold; /* Update header background color */
+  color: #fff;
+}
+
+
+#main-nav {
+    display: flex;
+    align-items: center;
+}
+.flavours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Adjust the grid layout for different screen sizes */
+@media screen and (max-width: 768px) {
+    .flavours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flavours-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.box-flavour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav li {
+    margin-left: 1rem;
+}
+
+#logo {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+#book-now-header {
+    text-align: center;
+}
+
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Section Styles */
+#hero-summary {
+    padding: 2rem;
+}
+
+/* Flavors Section Styles */
+#contact {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* About Burple Section Styles */
+#about-us-text {
+    padding: 2rem;
+}
+
+#about-us-text p {
+    margin-bottom: 1rem;
+}
+
+/* Contact Section Styles */
+#contact-hero-form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact-hero-form input[type="text"],
+#contact-hero-form input[type="email"],
+#contact-hero-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact-hero-form input[type="submit"] {
+    flex: 1 0 auto;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+/* Reviews Section Styles */
+#reviews {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.review {
+    text-align: center;
+}
+
+.review img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#footer-links li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+/* Lightbox Styles */
+.lightbox-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+}
+
+.lightbox_close_main {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.lb_heading {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    font-size: 1.2rem;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    #main-nav {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #333;
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-header {
+        justify-content: space-between;
+    }
+
+    #main-nav.active {
+        display: flex;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+    }
+
+    #main-nav li {
+        margin: 0.5rem 0;
+    }
+
+    #book-now-header,
+    #contact-hero-form form {
+        margin-top: 1rem;
+    }
+
+    #hero-heading-box,
+    #contact-hero-address {
+        text-align: center;
+    }
+
+    .lightbox-main article {
+        text-align: center;
+    }
+
+    #about-us-text-column1,
+    #about-us-text-column2 {
+        padding: 0;
+    }
+
+    .why-choose-us-image-con,
+    .show-hide {
+        margin-bottom: 1rem;
+    }
+}
+
+
+span{
+  color:rgb(135, 105, 243);
+}
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7px;
+  border-width: 7px;
+  margin-top: -35px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+
+
+
+#reviews {
+  text-align: center;
+}
+
+
+#where-we-are h2 {
+  margin-top: 40px;
+
+  font-size: large;
+  text-align: center;
+}
+
+
+
+#reviews p {
+  margin-top: 10px;
+}
+
+#reviews div {
+  margin-top: 15px;
+}
+
+#reviews img:hover {
+  opacity: 70%;
+}
+
+.lightbox-main { 
+  width: 79vw; 
+  height: 27vh; 
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  background-color:rgb(241, 195, 118);
+  z-index: 500;
+  display: none;
+}
+
+.lightbox_close_main {
+  position: relative;
+  top: 25px;
+  left: 75%;
+  color: white;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+.lightbox_close_main:hover { opacity: 0.5; color: rgb(241, 195, 118); }
+
+
+
+.lightbox-main article {
+  width: 70%;
+  margin-left: 20%;
+  color: white;
+}
+
+.lb_text, .lb_heading { text-align: center; }
+
+.lb_text {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+}
+
+.lightbox-main:target { display: block; }
+
+a {
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+}
+#book-now-header{
+  display: none;
+}
+
+
+/* 2. ---Main Nav--- */
+
+#main-nav button {
+  width:25px;
+  height: 35px;
+  background: url(../images/Burple\ logo.jpg) no-repeat center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: all .5s ease;
+  border: 0;
+}
+#main-nav button.expanded {
+  transform: rotate(90deg);
+}
+#burger-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+#burger-con.slide-toggle {
+  display: block;
+}
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  color:black;
+}
+
+#main-nav ul li a:hover {
+  color: rgb(241, 195, 118);
+}
+
+
+.book-now {
+  background-color: rgb(135, 105, 243);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-now:hover {
+  box-shadow: inset 0px -120px 0px black;
+}
+
+#book-now-header {
+  display: none;
+}
+
+#logo {
+  max-width: 288px;
+  margin-bottom: 20px;
+  margin-left: 85px;
+}
+
+#think-beer{
+  padding: 25px;
+  text-align: center;
+  font-size: 42px;
+}
+#think-us{
+  padding: 25px;
+  text-align: center;
+  font-size: 42px;
+}
+
+/* 2. ---Main Nav--- */
+
+#hero img {
+  /* stretch image across all 3 grid columns */
+  grid-column: 1/-1;
+  /* set the image to stay in first row, so overlap can happen */
+  grid-row: 1/1;
+  /* make sure the image stays centered at xl screen sizes */
+  justify-self: center;
+}
+
+#hero .grid-con {
+  /* tell the overlapping 12 column grid to live in the center
+  of the 3 column grid */
+  grid-column: 2/3;
+  /* tell the overlappig grid to live in row 1 so it overlaps the image */
+  grid-row: 1/1;
+  /* get rid of margin 0 auto from original .grid-con class */
+  margin: 0;
+}
+
+#hero-main {
+  height: 220px;
+  object-fit: cover;
+}
+
+#book-now-hero {
+  height: 67px;
+}
+
+#booking-calendar {
+  display: none;
+}
+
+.hero-img-h2 span, .hero-img-h3 span {
+  color: rgb(120, 193, 243);
+  font-size: 32px;
+}
+
+.hero-img-h2, .hero-img-h3 {
+  color: black;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-top: -120px;
+  margin-left: 100px;
+}
+
+#hero-heading-box {
+  align-self: end;
+}
+
+
+#hero-summary p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+/* 4. ---Main Hero Image Contact */
+
+#contact {
+  font-size: 12px;
+  background-color: rgb(135, 105, 243);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#contact .grid-con > div {
+  width: 240px;
+  margin: 0 auto;
+}
+
+/* 5. ---Why Choose Us--- */
+
+#why-choose-us-nav {
+  padding-top: 20px;
+}
+
+#why-choose-us-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#why-choose-us-nav ul li {
+  margin-bottom: 15px;
+}
+
+#why-choose-us-nav ul li a {
+  color:#626262;
+  padding: 5px;
+}
+
+#why-choose-us-nav ul li a.selected {
+  border-left:rgb(135, 105, 243) solid 5px;
+}
+
+#why-choose-us-hero-con img {
+  /* stretch the image across all 3 columns to be full width */
+  grid-column: 1/-1;
+  /* tell the image to stay in the first row */
+
+  justify-self: center;
+}
+
+#why-choose-us-hero {
+  height: 195px;
+  object-fit: cover;
+  object-position: 30%;
+}
+
+#why-choose-us-hero-con .grid-con {
+  grid-column: 2/3;
+  grid-row: 1/1;
+  margin: 0;
+}
+
+#why-choose-us-heading-box {
+  align-self: end;
+}
+
+.why-choose-us-image {
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.why-choose-us-image span{
+  display: none;
+}
+
+
+.why-choose-us-image-con h2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.why-choose-us-image-con p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.why-choose-us-image-con a {
+  color: #707070;
+  font-size: 12px;
+}
+
+.show-hide {
+  display: none;
+}
+
+#why-choose-us-bottom-nav {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#why-choose-us-bottom-nav ol {
+  list-style-type: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+#why-choose-us-bottom-nav ol li {
+  display: inline;
+}
+
+#why-choose-us-bottom-nav ol li a {
+  padding: 5px;
+  color: #fff;
+}
+
+/* 6. ---About & FAQ--- */
+
+#about-hero-con img {
+  /* stretch the image across the entire grid */
+  grid-column: 1/-1;
+  /* set the image to live in the first row */
+ grid-row:1/1;
+  justify-self: center;
+}
+
+#about-hero-con .grid-con {
+   /* tell other grid to live in middle column */
+   grid-column: 2/3;
+   /* also tell it to stay in first rown instead of another row below
+   to allow overlap to happen */
+   grid-row:1/1;	
+   /* get rid of margin 0 auto from original class */
+   margin: 0;
+}
+
+#about-hero {
+  object-fit: cover;
+  /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
+  object-position: right;
+  height: 195px;
+}
+
+#about-hero-heading-box {
+  align-self: end;
+}
+
+#about-us-text {
+  padding-bottom: 60px;
+}
+
+#about-us-text p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 15px;
+}
+
+#about-us-text-column2 {
+  font-style: italic;
+}
+
+
+
+/* 7. ---Contact--- */
+
+#contact{
+  text-align: center;
+  font-size: 22px;
+  background-color: #fff;
+}
+
+#contact-hero-con img {
+  /* stretch the image across the entire grid */
+  grid-column: 1/-1;
+  /* set the image to live in the first row */
+ grid-row:1/1;
+  justify-self: center;
+}
+
+#contact-hero-con .grid-con {
+   /* tell other grid to live in middle column */
+   grid-column: 2/3;
+   /* also tell it to stay in first rown instead of another row below
+   to allow overlap to happen */
+   grid-row:1/1;	
+   /* get rid of margin 0 auto from original class */
+   margin: 0;
+}
+
+#contact-hero {
+  object-fit: cover;
+  /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
+  object-position: center;
+  height: 195px;
+  background-color: grey;
+}
+
+#contact-hero-heading-box {
+  align-self: end;
+}
+
+#contact-hero-text {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#contact-hero-address p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#contact-hero-address {
+  margin-bottom: 30px;
+}
+
+#contact-hero-address h3 {
+  margin-bottom: 25px;
+  font-family:sans-serif;
+  font-size: 21px;
+  font-weight: lighter;
+  line-height: 35px;
+  margin-top: 20px;
+}
+
+#contact-hero-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-hero-form input, textarea {
+  padding: 22px;
+  border: 2px solid #d6d6d6;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font: inherit;
+  width: 100%;
+}
+
+#contact-hero-form textarea {
+  height: 250px;
+}
+
+#contact-hero-form input[type="submit"] {
+  background:rgb(135, 105, 243);;
+  color: #fff;
+  border: none;
+  transition: all 200ms ease-in;
+  width: 301px;
+  align-self: center;
+  margin-left: -20px;
+  margin-top: 10px;
+
+}
+
+#contact-hero-form input[type="submit"]:hover {
+  background-color: #626262;
+  border-radius: 0;
+}
+
+/* 8. ---Footer--- */
+
+#footer-hero {
+background-color:rgb(135, 105, 243);;
+ background-repeat: no-repeat;
+ background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 40px;
+  padding-bottom: 80px;
+}
+
+
+
+#footer-hero h3 {
+  margin-top: 30px;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+#book-now-b{
+  margin-left: 300px;
+}
+
+#footer-privacy .line-seperator {
+  margin-top: 0px;
+}
+
+#footer-contact-info h3 {
+  font-size: 23px;
+}
+
+#footer-contact-info p {
+  margin-bottom: 20px;
+  line-height: 18px;
+  font-size: 11px;
+}
+
+#footer-nav, #footer-book-now {
+  display: none;
+}
+#footer{
+  height: 300px;
+  margin-top: 40px;
+}
+
+
+#footer-links{
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  margin-right: 28px;
+}
+
+#footer-links a {
+  color: white;
+}
+
+.form-box{
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.form-box input{
+  font-size: 12px;
+  color: black;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-box button{
+  color: white;
+  padding: 10px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover{
+  background-color: #fff;
+  color: black;
+}
+
+
+
+
+
+
+
+/* 10. ---Tablet Sized Screens--- */
+
+@media screen and (min-width: 768px) {
+
+  #video{
+     height: 400px;
+     width: 1100px;
+     align-self: center;
+  }
+
+  #animation-11{
+margin-left: 200px;
+  }
+  
+
+  #contact{
+     font-size: 43px !important;
+  }
+
+  #book-now-header{
+     display: flex;
+  }
+
+  #sticky-nav-con {
+     position: sticky;
+     background-color: #fff;
+     top: 0px;
+     border-bottom: solid 1px #c3c3c3;
+     z-index: 1; 
+     /* had to set z-index as css filters was causing images to overlap, see below */
+  }
+
+  #button {
+     display: none;
+  }
+
+  #logo {
+     margin-top: 32px;
+     order: -1;
+  }
+
+  #burger-con {
+     display: block;
+     font-size: 12px;
+  }
+
+  #burger-con ul li, #burger-con ul li:first-child {
+     border: none;
+     display: inline;
+  }
+
+  #main-nav ul li a {
+     display: inline;
+  }
+
+  #burger-con ul li {
+     margin-right: 10px;
+  }
+
+  #burger-con ul li:last-child {
+     margin-right: 0;
+  }
+
+  #main-nav {
+     margin-top: 4%;
+     margin-bottom: 4%;
+     padding-left: 90px;
+  }
+
+  #book-now-header {
+  display: flex;
+   margin-right: -5px;
+   margin-top: 41px;
+   margin-bottom: 35px;
+  }
+
+  #book-now-hero {
+     display: none;
+  }
+
+  #hero-main {
+     height: 455px;
+  }
+
+
+  .hero-img-h2, .hero-img-h3 {
+     padding: 30px 15px;
+     font-size: 18px;
+     margin-top: -150px;
+     margin-left: -80px;
+
+  }
+  .hero-img-h2 span, .hero-img-h3 span {
+     font-size: 14px;
+  }
+
+  #contact {
+     line-height: 22px;
+     height: 214px;
+     padding-top: 60px;
+     font-size: 11px;
+  }
+
+  .fas {
+     font-size: 60px;
+  }
+
+  #why-choose-us-nav ul li {
+     display: inline;
+     margin-right: 30px;
+  }
+
+  #why-choose-us-nav {
+     margin-bottom: 30px;
+     margin-top: 30px;
+  }
+
+  #why-choose-us-nav ul li a.selected {
+     border-left: none;
+     border-bottom: 5px solid rgb(105, 243, 124);;
+     padding-bottom: 25px;
+  }
+
+  #why-choose-us-hero {
+     height: 240px;
+  }
+
+  .why-choose-us-image {
+     float: none;
+     margin-right: 0px;
+     margin-top: 0px;
+     position: relative;
+  }
+
+  .why-choose-us-image span{
+     display: block;
+     position: absolute;
+     bottom: 30px;
+     right: 0px;
+     color: #fff;
+     font-size: 88px;
+  }
+
+  .why-choose-us-image-con h2 {
+     font-size: 22px;
+     margin-top: 0;
+     margin-bottom: 10px;
+  }
+
+  .why-choose-us-image-con h3 {
+     font-size: 16px;
+     margin-bottom: 20px;
+  }
+
+  .why-choose-us-image img {
+     z-index: -1;
+     /* set z-index lower so images don't overlap the nav
+     applying filters affects the browser painting order */
+     display: block;
+     /* the images were not fully filling the grid boxes, until I set them to block */
+  }
+
+  .why-choose-us-image-con {
+     margin-bottom: 30px;
+  }
+
+  #hot-tub p, #hot-tub a, #hot-tub h2 {
+     display: none;
+  }
+
+  #spa {
+     background-color: #626262;
+     color: #fff;
+     padding: 20px;
+  }
+
+  #spa p {
+     /* not supported in all browsers */
+     display: -webkit-box;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;  
+     text-overflow: ellipsis;
+     overflow: hidden;
+  }
+
+  #spa a {
+     color: #fff;
+     padding-bottom: 5px;
+  }
+
+  #spa a:hover {
+     border-bottom: solid 3px rgb(135, 105, 243);
+  }
+
+  #why-choose-us-bottom-nav {
+     display: none;
+  }
+
+  #why-choose-us {
+     margin-bottom: 80px;
+  }
+
+  .show-hide {
+     display: block;
+  }
+
+  #about-hero {
+     height: 240px;
+  }
+
+  #about-us-text {
+     column-count: 2;
+  }
+
+  #about-us-text-column1 {
+     margin-bottom: 80px;
+  }
+
+  #contact-hero {
+     height: 240px;
+  }
+  #contact-hero-text {
+     padding-top: 50px;
+     margin-top: 20px;
+  }
+
+
+  #footer-nav {
+     display: block;
+  }
+
+  #footer-nav {
+     margin-top: 40px;
+     column-count: 2;
+  }
+
+  #footer-nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+  }
+
+  #footer-nav ul li a {
+     color: #fff;
+  }
+
+  #footer-nav ul li {
+     margin-bottom: 20px;
+  }
+
+  .lightbox-main {
+     width: 52vw;
+     height: 30vh;
+     position: absolute;
+     top: 100%;
+     left: 20%;
+     right: 20%;
+     background-color:rgb(135, 105, 243);;
+     z-index: 500;
+     display: none;
+}
+.lightbox_close_main {
+     position: relative;
+     top: 30px;
+     left: 75%;
+     color: white;
+     font-size: 5em;
+     text-decoration: none;
+}
+
+.lightbox_close_main:hover { opacity: 0.5; color: grey; }
+
+.lightbox-main article {
+     width: 80%;
+     margin-left: 15%;
+     margin-right: 15%;
+     color: white;
+}
+.lb_text, .lb_heading { text-align: center; }
+
+.lb_text {
+     line-height: 1.6 !important;
+     margin-left: 0;
+     padding-top: 2em;
+}
+.lightbox-main:target { display: block; }
+
+
+
+  button {
+/*  width: 162px;*/
+  height: -38px;
+  font-size: 10px;
+  color:black;
+/*  background: white;*/
+  border: none;
+  position: sticky;
+  z-index: 0;
+  transition: 0.s;
+  cursor: pointer;
+  padding: -44px;
+  margin: 57px;
+  margin-top: -8px;
+  margin-top: -13px;
+  margin-top: -23px;
+  margin-top: -85px;
+}
+.box-contact {
+    background-color: #fff;
+    color: rgb(255 255 255);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.heading-black{
+  color:black;
+  text-align: left;
+}
+.heading-white{
+  color:white;
+}
+.box-header {
+    background-color: rgb(201 204 255);
+    color: black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .testimonial {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+
+@media screen and (min-width: 768px) {
+    button img {
+        border-radius: 50%;
+        left: -2px;
+        position: relative;
+        top: 2px;
+        width: 594px;
+        opacity: 0.9;
+    }
+}
+
+
+  button:before {
+     position: flex;
+     inset: -8px;
+     padding: 10px;
+     border-radius: 50%; 
+     background: conic-gradient(
+           #ffffff ,
+           rgba(255, 255, 255, 0) 30deg 120deg,
+           #f8f000 150deg 180deg,
+           rgba(255, 255, 255, 0) 210deg 300deg,
+           #0af7ff 330deg
+       );
+   }
+   button:after {
+     content: "";
+     position: absolute;
+     inset: -100px;
+     background:
+     radial-gradient(200px at left  400px top 150px,#ff53bb 100%,#0000),
+     radial-gradient(200px at right 400px bottom 150px,blue 100%,#0000);
+     filter: blur(120px);
+     opacity: .5;
+   }
+
+  button:before,
+  button:after {
+     transition:.5s, 99999s 99999s transform;
+  }
+  button:hover {
+     box-shadow: 0 0 0 1px #666;
+  }
+  
+  button:hover:before,
+  button:hover:after {
+     transform: rotate(36000deg);
+     transition: .1s,600s linear transform;
+  }
+  button:before {
+  background-color: #fff;
+  border: 2px solid #fff;
+  }
+   button>img{
+  border-radius: 50%;
+     left: -2px;
+     position: relative;
+     top: 2px;
+     width: 594px;
+     opacity:0.9;
+   }
+}
+
+/* 11. ---Desktop (1200px) Sized Screens */
+
+@media screen and (min-width: 1200px) {
+  #video{
+     height: 500px;
+     width: 1200px;
+     align-self: center;
+   
+  }
+
+  #contact{
+     font-size: 63px;
+  }
+  #main-header {
+     height: 110px;
+  }
+
+  #main-nav {
+     margin-top: 2%;
+     margin-bottom: 2%;
+     margin-left: 25px;
+  }
+
+  #burger-con ul li {
+     margin-right: 25px;
+     font-size: 16px;
+  }
+
+  #burger-con {
+     margin-top: 28px;
+  }
+
+  .book-now {
+     font-size: 18px;
+  }
+
+
+  .hero-img-h2, .hero-img-h3 {
+     font-size: 24px;
+  }
+
+  .hero-img-h2 span, .hero-img-h3 span {
+     font-size: 16px;
+  }
+  #why-choose-us-nav {
+     margin-top: 50px;
+     font-size: 24px;
+  }
+
+  #why-choose-us-hero {
+     height: 380px;
+  }
+
+  #spa p {
+     display: block;
+     -webkit-line-clamp: unset;
+     -webkit-box-orient: unset;
+     text-overflow: unset;
+     overflow: auto;
+  }
+
+  #why-choose-us-nav {
+     margin-top: 50px;
+     font-size: 24px;
+  }
+
+  #about-hero {
+     height: 380px;
+  }
+
+  #contact-hero {
+     height: 380px;
+  }
+
+
+  .map-container iframe {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+  }
+  .map-container {
+     width: 100%;
+     height: 450px;
+     position: relative;
+  }
+
+  #map {
+     width: 100%;
+     height: 100%;
+  }
+  .current-location-marker {
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  }
+  #book-now-header{
+     display: flex;
+  }
+}
+
+
+
+/* error page css */
+
+#error {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#go-back {
+text-align: center;
+color: black;
+transition: 0.5s;
+background-color: grey;
+}
+
+#go-back:hover {
+  color: orange;
+  }
+
+#hero-con{
+  height: 200px;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+
+
+
+
+
+
+/* about-us page css */
+
+ .junish{
+  font-size: 2.1rem;
+  color: white;
+}
+
+#menu-con-contact-us{
+  font-size: 1.8rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  box-shadow: inset black;
+  color: grey;
+  text-decoration: none;
+}
+
+
+#hero-image-contact-us {
+  width: 1500px;
+  height: 650px;
+  margin-top: 70px;
+}
+
+
+.butt-contact-us{
+  border: 1px;
+  background-color: black;
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  margin-top: -295px;
+  margin-left: 125px;
+  font-size: 25px;
+  justify-content: center;
+  text-align: center;
+}
+
+.butt-contact-us:hover{
+ background-color: rgb(229, 229, 229);
+ color:black;
+}
+
+
+
+.butt-1-contact-us{
+  border: 1px;
+  background-color: black;
+  height: 60px;
+  width: 367px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  margin-top: 74px;
+  font-size: 25px;
+  margin-left: 8px;
+}
+
+.butt-1-contact-us:hover{
+ background-color: rgb(229, 229, 229);
+ color:black;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden-contact-us {
+ display: none;
+}
+
+
+
+#hero-contact-us {
+ margin-top: 100px;
+}
+
+#hero-text-contact-us {
+ grid-column: 1/8;
+ margin-top: 15px;
+ height: 106px;
+}
+
+#hero-image-contact-us {
+ grid-column: 8/-1;
+ height: 780px;
+
+}
+
+
+.lightbox-contact-us {
+  width: 79vw; 
+  height: 60%; 
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color:rgb(135, 105, 243);;
+  z-index: 500;
+  display: none;
+}
+
+
+.lightbox_close-contact-us{
+  position: relative;
+  top: 25px;
+  color: white;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+
+.lightbox_close-contact-us:hover { opacity: 0.5; color: grey; }
+
+.lightbox-contact-us article {
+  
+  margin:5%;
+}
+.box-history {
+    background-color: rgb(233 233 233);
+    color: rgb(27, 27, 27);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lb_text-contact-us, .lb_heading-contact-us {
+  text-align: left;
+  color: white;
+}
+
+.lb_text-contact-us {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+  color: white;
+}
+
+
+.lightbox-contact-us:target { display: block; }
+
+
+/* l */
+
+.lightbox1-contact-us {
+  width: 79vw; 
+  height: 27vh; 
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color:rgb(105, 243, 124);;
+  z-index: 500;
+  display: none;
+}
+
+
+.lightbox_close1-contact-us{
+  position: relative;
+  top: 25px;
+  color: white;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+
+.lightbox_close1-contact-us:hover { opacity: 0.5; color: brown; }
+
+.lightbox1-contact-us article {
+  width: 45%;
+  margin-left: 40%;
+}
+
+.lb_text-contact-us, .lb_heading-contact-us { 
+  text-align: left;
+  color: white;
+}
+
+.lb_text-contact-us {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+  color: white;
+}
+
+
+.lightbox1-contact-us:target { display: block; }
+
+
+
+
+/* burple page css */
+
+
+
+
+#Stats {
+  color: white;
+margin-top: -100px;
+}
+
+img.demo {
+  padding: 22px;
+  border: 2px solid #d6d6d6;
+  border-radius:  5px;
+  box-shadow: 12px 12px 12px black;
+
+
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#hero-con{
+  height: 200px;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+
+
+#body-section2{
+  margin-top: 60px;
+  margin-left: 127px;
+  width: 1188px;
+  height: 450px;
+
+}
+
+
+input, textarea {
+  padding: 22px;
+  border: 2px solid #d6d6d6;
+  border-radius:  5px;
+  box-shadow:black;
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
+  font: inherit;
+}
+
+
+body {
+  color: #626262;
+  font-family: 'Sanchez', 'Times New Roman', serif;
+}
+
+a {
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+}
+
+input, textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#beer-title {
+  margin-top: 20px;
+}
+
+#beer-title, #beer-subtitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#beer-logo {
+  height: 198px;
+  width: 1530px;
+  translate: -5px 13px;
+  align-self: center;
+}
+
+#beer-logo2 {
+  height: 216px;
+  width: 1383px;
+  translate: -6px 31px;
+}
+#go-back {
+  margin-left: -50px;
+  font-size: 40px;
+}
+
+#go-back:hover {
+  color: gold;
+
+}
+
+.cans-beers {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 12px 12px 12px black; 
+
+}
+
+.cans-beers:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#ToggleButton {
+  background-color: black;
+  color: white;
+  width: 92px;
+  cursor: pointer;
+}
+
+#ToggleButton,#ingredientsTable {
+translate: 550px 0px;
+
+}
+
+#ingredientsTable tr {
+  background-color: rgb(179, 179, 179);
+  width: 750px;
+
+
+}
+
+#ingredientsTable td {
+  background-color: rgb(209, 209, 209);
+  width: 750px;
+}
+
+
+.gallery-beers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 100px;
+}
+
+.gallery-beers img {
+width: 100%;   
+}
+#ToggleButton {
+  background-color: black;
+  color: white;
+  width: 92px;
+  cursor: pointer;
+}
+
+#ToggleButton,#ingredientsTable2 {
+translate: 550px 0px;
+
+}
+
+#ingredientsTable2 tr {
+  background-color: rgb(179, 179, 179);
+
+
+}
+
+#ingredientsTable2 td {
+  background-color: rgb(209, 209, 209);
+}
+
+
+
+
+.lightbox-beers {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(30, 30, 30, 30.85);
+  background-image: url('../images/Burple\ logo.jpg');
+  background-repeat: no-repeat;
+
+  background-size: 55vh;
+  background-position: 40px center;
+
+  z-index: 5000;
+
+  display: none;
+}
+
+
+.lightbox_close-beers{
+  margin-left: 1300px;
+  font-size: 40px;
+  color: white;
+  margin-bottom: -200px;
+}
+
+
+.lightbox_close-beers:hover { opacity: 0.5; color: brown; }
+
+.lightbox-beers article {
+  width: 45%;
+  margin-left: 40%;
+}
+
+.lb_text, .lb_heading {
+  text-align: left;
+  color: white;
+}
+
+.lb_text {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+  color: white;
+}
+
+
+.lightbox-beers:target { display: block; }
+
+
+/* l */
+
+.lightbox1-beers {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(30, 30, 30, 30.85);
+  background-image: url('../images/burple\ logo.svg');
+  background-repeat: no-repeat;
+
+  background-size: 55vh;
+  background-position: 40px center;
+
+  z-index: 5000;
+
+  display: none;
+}
+
+
+.lightbox_close1-beers{
+  margin-left: 1300px;
+  font-size: 40px;
+  color: white;
+  margin-bottom: -200px;
+}
+
+
+.lightbox_close1-beers:hover { opacity: 0.5; color: brown; }
+
+.lightbox1-beers article {
+  width: 45%;
+  margin-left: 40%;
+}
+
+.lb_text-beers, .lb_heading-beers { 
+  text-align: left;
+  color: white;
+}
+
+.lb_text-beers {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+  color: white;
+}
+
+.lb_heading-beers {
+  translate: 55px 0px;
+}
+
+#ToggleButton-Beer {
+  cursor: pointer;
+}
+
+#nutritional-facts, #nutritional-facts2 {
+  display: none;
+   width: 483px;
+   height: 566px;
+   margin-left: 206px;
+   margin-top: 230px;
+}
+
+
+.lightbox1-beers:target { display: block; }
+
+
+.bottle-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+
+
+@media screen and ( min-width: 720px){
+ #hero-contact-us1{
+  margin-left:100px
+ }
+
+ #hero-contact-us2{
+  margin-left:100px
+ }
+}
+@media screen and ( min-width: 1000px){
+  #hero-contact-us1{
+   margin-left:250px
+  }
+  #hero-contact-us2{
+     margin-left:250px
+    }
+}
+
+
+.error-ani{
+  background:url(../images/Burple_logo-\ no\ bg.png) no-repeat;
+  margin-left:60px;
+  background-size:cover;
+  margin-bottom:190px;
+}
+
+
+#animation-11{
+  margin-bottom:100px;
+  align-self:center;
+}
